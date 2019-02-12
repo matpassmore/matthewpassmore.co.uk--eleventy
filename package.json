@@ -3,10 +3,24 @@
   "version": "1.0.0",
   "description": "Project code for matthewpassmore.co.uk, with pipelines for Sass and Js.",
   "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js & eleventy",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js & eleventy --watch",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js & eleventy",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js & eleventy"
+  },
   "repository": "https://github.com/matpassmore/matthewpassmore.co.uk",
   "author": "Matthew Passmore <matthew@matthewpassmore.co.uk>",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1"
+    "@11ty/eleventy": "^0.7.1",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.14",
+    "sass": "^1.17.0",
+    "sass-loader": "7.*",
+    "vue-template-compiler": "^2.6.6"
   }
 }
