@@ -1,0 +1,12 @@
+{
+  "name": "matthewpassmore",
+  "version": "1.0.0",
+  "description": "Project code for matthewpassmore.co.uk, with pipelines for Sass and Js.",
+  "main": "index.js",
+  "repository": "https://github.com/matpassmore/matthewpassmore.co.uk",
+  "author": "Matthew Passmore <matthew@matthewpassmore.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  }
+}
