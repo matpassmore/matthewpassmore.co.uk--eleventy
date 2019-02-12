@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+var tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ mix
   .copyDirectory('src/fonts', 'dist/fonts')
   .options({
     processCssUrls: false,
+    postCss: [ tailwindcss('./tailwind.js') ],
     autoprefixer: {
       options: {
         grid: true,
