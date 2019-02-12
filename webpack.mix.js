@@ -15,8 +15,6 @@ var tailwindcss = require('tailwindcss');
 mix
   .js('src/scripts/main.js', 'dist/js/')
   .sass('src/styles/main.scss', 'dist/css/')
-  .copyDirectory('src/images', 'dist/images')
-  .copyDirectory('src/fonts', 'dist/fonts')
   .options({
     processCssUrls: false,
     postCss: [ tailwindcss('./tailwind.js') ],
